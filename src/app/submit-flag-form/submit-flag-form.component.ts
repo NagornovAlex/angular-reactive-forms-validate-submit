@@ -29,8 +29,8 @@ export class SubmitFlagFormComponent implements OnInit {
 
   isFieldValid(field: string) {
     return (
-      (!this.form.get(field).valid && this.form.get(field).touched) ||
-      (this.form.get(field).untouched && this.formSumitAttempt)
+      !this.form.get(field).valid && 
+      (this.form.get(field).touched) || (this.form.get(field).untouched && this.formSumitAttempt))
     );
   }
 
